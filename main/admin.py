@@ -4,6 +4,7 @@ from .models import Restaurant, Salad, Shashlik, Sushi, Desert, Burger, Pizza, P
 
 class RestAdmin(admin.ModelAdmin):
     filter_horizontal = ('foods', 'kitchens')
+    prepopulated_fields = {'slug': ('title',)}
 
 
 admin.site.register(Restaurant, RestAdmin)
