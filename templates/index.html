@@ -1,0 +1,242 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- Main Slider -->
+		<div class="main-slider container_center">
+			<div class="gallery-slider">
+				<div class="gallery-slide"><img src="{% static 'img/1.png' %}" alt="Картинка 1"></div>
+				<div class="gallery-slide"><img src="{% static 'img/slide2.jpg' %}" alt="Картинка 2"></div>
+				<div class="gallery-slide"><img src="{% static 'img/slide3.jpg' %}" alt="Картинка 3"></div>
+				<div class="gallery-slide"><img src="{% static 'img/slide4.jpg' %}" alt="Картинка 4"></div>
+			</div>
+		</div>
+		<!-- Categori -->
+		<div class="main-categori center-block">
+			<div class="container_center">
+				<h2>Выберите категорию</h2>
+				<div class="main-catalog-block">
+					<div class="main-catalog_item">
+						<a href="">
+							<img src="{% static 'img/categori-all-restorans.jpg' %}" alt="Все рестораны">
+							<div class="shadow"></div>
+							<div class="title">
+								<p>Все рестораны</p>
+								<div class="catalog-ico catalog-ico-restaurant"></div>
+							</div>
+						</a>
+					</div>
+					<div class="main-catalog_item">
+						<a href="">
+							<img src="{% static 'img/categori-sushi.jpg' %}" alt="Суши">
+							<div class="shadow"></div>
+							<div class="title">
+								<p>Суши</p>
+								<div class="catalog-ico catalog-ico-sushi"></div>
+							</div>
+						</a>
+					</div>
+					<div class="main-catalog_item">
+						<a href="">
+							<img src="{% static 'img/categori-pizza.jpg' %}" alt="Пицца">
+							<div class="shadow"></div>
+							<div class="title">
+								<p>Пицца</p>
+								<div class="catalog-ico catalog-ico-pizza"></div>
+							</div>
+						</a>
+					</div>
+					<div class="main-catalog_item">
+						<a href="">
+							<img src="{% static 'img/categori-desert.jpg' %}" alt="Десерты">
+							<div class="shadow"></div>
+							<div class="title">
+								<p>Десерты</p>
+								<div class="catalog-ico catalog-ico-desert"></div>
+							</div>
+						</a>
+					</div>
+					<div class="main-catalog_item">
+						<a href="">
+							<img src="{% static 'img/categori-salat.jpg' %}" alt="Салаты">
+							<div class="shadow"></div>
+							<div class="title">
+								<p>Салаты</p>
+								<div class="catalog-ico catalog-ico-salat"></div>
+							</div>
+						</a>
+					</div>
+					<div class="main-catalog_item">
+						<a href="">
+							<img src="{% static 'img/categori-burger.jpg' %}" alt="Бургеры">
+							<div class="shadow"></div>
+							<div class="title">
+								<p>Бургеры</p>
+								<div class="catalog-ico catalog-ico-burger"></div>
+							</div>
+						</a>
+					</div>
+					<div class="main-catalog_item">
+						<a href="">
+							<img src="{% static 'img/categori-shashlik.png' %}" alt="Шашлыки">
+							<div class="shadow"></div>
+							<div class="title">
+								<p>Шашлыки</p>
+								<div class="catalog-ico catalog-ico-restaurant"></div>
+							</div>
+						</a>
+					</div>
+					<div class="main-catalog_item">
+						<a href="">
+							<img src="{% static 'img/categori-pirog.png' %}" alt="Пироги">
+							<div class="shadow"></div>
+							<div class="title">
+								<p>Пироги</p>
+								<div class="catalog-ico catalog-ico-sushi"></div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="advantage center-block">
+			<div class="container_center">
+				<h2>Наши преимущества</h2>
+				<div class="advantage_block">
+					<div class="advantage_item">
+						<div class="advantage-ico ico-24"></div>
+						<h3 class="title">Круглосуточно</h3>
+						<p>NICEFOOD работает для вас круглосуточно, а операторы колл-центра всегда готовы помочь вам с выбором блюд, а также уточнить статус вашего заказа в любое время суток</p>
+					</div>
+					<div class="advantage_item">
+						<div class="advantage-ico ico-sale"></div>
+						<h3 class="title">Акции и скидки</h3>
+						<p>На NICEFOOD всегда проходят различные акции и спецпредложения. Вы можете выбрать для себя наиболее выгодный вариант заказа еды с доставкой, просто следите за нашими акциями</p>
+					</div>
+					<div class="advantage_item">
+						<div class="advantage-ico ico-bonus"></div>
+						<h3 class="title">Бонусы</h3>
+						<p>Копите баллы и оплачивайте ими свои последующие заказы. За каждый заказ вам начисляется до 10% от суммы вашего заказа</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="reviews center-block">
+			<div class="container_center">
+				<h2>Наши отзывы</h2>
+				<div class="reviews-slider">
+					<div class="reviews_item">
+						<div class="user-post-review">
+							<div class="user-image">
+								<img src="{% static 'img/review/user1.jpg' %}" alt="user-image">
+							</div>
+							<div class="user-info">
+								<p class="user-name">Марина А.</p>
+								<p class="user-post-text">Очень вкусная пицца!!! Молодцы!!! Доставка на 5!</p>
+							</div>
+						</div>
+						<div class="user-post-review">
+							<div class="user-image">
+								<img src="{% static 'img/review/user2.jpg' %}" alt="user-image">
+							</div>
+							<div class="user-review">
+								<p class="user-name">Вадим С.</p>
+								<p class="user-post-text">Десерт ПАБАНА и Нутелла МИНТ - очень и очень !! Пицца и супчик грибной вкусные. Скорость доставки 5+</p>
+							</div>
+						</div>
+						<div class="user-post-review">
+							<div class="user-image">
+								<img src="{% static 'img/review/user3.jpg' %}" alt="user-image">
+							</div>
+							<div class="user-review">
+								<p class="user-name">Настя М.</p>
+								<p class="user-post-text">Цены невысокие. Качество еды хорошее. Десерты детям и любимой понравились. Я же за комбо!!</p>
+							</div>
+						</div>
+					</div>
+					<div class="reviews_item">
+						<div class="user-post-review">
+							<div class="user-image">
+								<img src="{% static 'img/review/user1.jpg' %}" alt="user-image">
+							</div>
+							<div class="user-info">
+								<p class="user-name">Андрей Ю.</p>
+								<p class="user-post-text">Очень вкусная пицца!!! Молодцы!!! Доставка на 5!</p>
+							</div>
+						</div>
+						<div class="user-post-review">
+							<div class="user-image">
+								<img src="{% static 'img/review/user2.jpg' %}" alt="user-image">
+							</div>
+							<div class="user-review">
+								<p class="user-name">Ксения В.</p>
+								<p class="user-post-text">Десерт ПАБАНА и Нутелла МИНТ - очень и очень !! Пицца и супчик грибной вкусные. Скорость доставки 5+</p>
+							</div>
+						</div>
+						<div class="user-post-review">
+							<div class="user-image">
+								<img src="{% static 'img/review/user3.jpg' %}" alt="user-image">
+							</div>
+							<div class="user-review">
+								<p class="user-name">Виктор А.</p>
+								<p class="user-post-text">Цены невысокие. Качество еды хорошее. Десерты детям и любимой понравились. Я же за комбо!!</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Best Deals -->
+		<div class="bestdeals center-block">
+			<div class="container_center">
+				<h2>Лучшие предложения</h2>
+				<div class="bestdeals-slider">
+					<div class="bestdeals_item">
+						<img src="{% static 'img/categori-desert.jpg' %}" alt="Картинка 1">
+						<div class="bestdeals_item-info">
+							<p>Получайте сладкие призы за баллы</p>
+							<div class="bestdeals_item-link"><a href="#">Выбрать приз</a></div>
+						</div>
+					</div>
+					<div class="bestdeals_item">
+						<img src="{% static 'img/categori-sushi.jpg' %}" alt="Картинка 1">
+						<div class="bestdeals_item-info">
+							<p>Все рестораны, рынки и магазины на одном сайте</p>
+							<div class="bestdeals_item-link"><a href="#">Выбрать место</a></div>
+						</div>
+					</div>
+					<div class="bestdeals_item">
+						<img src="{% static 'img/categori-pizza.jpg' %}" alt="Картинка 1">
+						<div class="bestdeals_item-info">
+							<p>Выгодные акции от KFC - всегда найдется что-то новенькое</p>
+							<div class="bestdeals_item-link"><a href="#">Посмотреть Акции</a></div>
+						</div>
+					</div>
+					<div class="bestdeals_item">
+						<img src="{% static 'img/categori-pizza.jpg' %}" alt="Картинка 1">
+						<div class="bestdeals_item-info">
+							<p>Выгодные акции от KFC - всегда найдется что-то новенькое</p>
+							<div class="bestdeals_item-link"><a href="#">Посмотреть Акции</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="podpiska center-block">
+			<div class="podpiska-block">
+				<div class="container_center">
+					<div>
+						<h3 class="text-info_1">Хотите быть в курсе самых интересных новостей?</h3>
+						<h3 class="text-info_2">Подписывайтесь на нашу рассылку:</h3>
+					</div>
+					<div class="podpiska-form-block">
+						<input class="email-input" type="text" placeholder="Введи E-mail">
+						<!-- <input class="btn" type="submit" value="Подписаться"> -->
+						<button class="btn">Подписаться</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer></footer>
+
+{% endblock %}

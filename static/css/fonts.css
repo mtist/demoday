@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'Century Gothic Regular';
+	src: url('../fonts/Century Gothic/CenturyGothic-Italic.eot');
+	src: local('../fonts/Century Gothic/Century Gothic Italic'), local('../fonts/Century Gothic/CenturyGothic-Italic'),
+		url('../fonts/Century Gothic/CenturyGothic-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
