@@ -1,5 +1,4 @@
 from django.db import models
-from django.template.defaultfilters import slugify
 
 
 class Restaurant(models.Model):
@@ -23,92 +22,12 @@ class Restaurant(models.Model):
         return self.title
 
 
-class Sushi(models.Model):
+class Food(models.Model):
     title = models.CharField(max_length=32)
     description = models.CharField(max_length=256)
+    kind = models.ForeignKey('Foods', on_delete='cascade')
     price = models.DecimalField(max_digits=8, decimal_places=2)
-
-    @property
-    def price(self):
-        return "%s₽" % self.price
-
-    def __str__(self):
-        return self.title
-
-
-class Pizza(models.Model):
-    title = models.CharField(max_length=32)
-    description = models.CharField(max_length=256)
-    price = models.DecimalField(max_digits=8, decimal_places=2)
-
-    @property
-    def price(self):
-        return "%s₽" % self.price
-
-    def __str__(self):
-        return self.title
-
-
-class Burger(models.Model):
-    title = models.CharField(max_length=32)
-    description = models.CharField(max_length=256)
-    price = models.DecimalField(max_digits=8, decimal_places=2)
-
-    @property
-    def price(self):
-        return "%s₽" % self.price
-
-    def __str__(self):
-        return self.title
-
-
-class Salad(models.Model):
-    title = models.CharField(max_length=32)
-    description = models.CharField(max_length=256)
-    price = models.DecimalField(max_digits=8, decimal_places=2)
-
-    @property
-    def price(self):
-        return "%s₽" % self.price
-
-    def __str__(self):
-        return self.title
-
-
-class Desert(models.Model):
-    title = models.CharField(max_length=32)
-    description = models.CharField(max_length=256)
-    price = models.DecimalField(max_digits=8, decimal_places=2)
-
-    @property
-    def price(self):
-        return "%s₽" % self.price
-
-    def __str__(self):
-        return self.title
-
-
-class Shashlik(models.Model):
-    title = models.CharField(max_length=32)
-    description = models.CharField(max_length=256)
-    price = models.DecimalField(max_digits=8, decimal_places=2)
-
-    @property
-    def price(self):
-        return "%s₽" % self.price
-
-    def __str__(self):
-        return self.title
-
-
-class Pyrog(models.Model):
-    title = models.CharField(max_length=32)
-    description = models.CharField(max_length=256)
-    price = models.DecimalField(max_digits=8, decimal_places=2)
-
-    @property
-    def price(self):
-        return "%s₽" % self.price
+    restaurants = models.ManyToManyField(Restaurant)
 
     def __str__(self):
         return self.title
@@ -123,6 +42,16 @@ class Foods(models.Model):
 
 class Kitchens(models.Model):
     title = models.CharField(max_length=32)
+
+    def __str__(self):
+        return self.title
+
+
+class RestFood(models.Model):
+    title = models.CharField(max_length=32)
+    rest = models.ForeignKey('Restaurant', on_delete='cascade')
+    description = models.CharField(max_length=32)
+    price = models.DecimalField(max_digits=8, decimal_places=2)
 
     def __str__(self):
         return self.title

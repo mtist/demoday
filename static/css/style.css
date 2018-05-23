@@ -276,16 +276,21 @@ a {
 
 .btns-login-reg {
   padding-left: 0px;
-  color: #333;
+  text-align: right;
   margin-right: 50px; }
 
 .btns-login-reg_item {
-  font-size: 18px;
+  font-size: 16px;
   border-bottom: 1px solid transparent;
   cursor: pointer; }
   .btns-login-reg_item:hover {
     color: #D77B2B;
     border-bottom: 1px solid #D77B2B; }
+  .btns-login-reg_item a {
+    color: #333; }
+    .btns-login-reg_item a:hover {
+      color: #D77B2B;
+      border-bottom: 1px solid #D77B2B; }
 
 .header-search {
   height: 70px;
@@ -299,6 +304,9 @@ a {
     margin: 0;
     font-size: 15px;
     border: none; }
+  .header-search select {
+    background-color: #FCF9F9;
+    cursor: pointer; }
   .header-search .header-search_line-edit {
     width: 420px;
     font-size: 16px; }
@@ -1112,7 +1120,7 @@ a {
   transition: border 500ms ease; }
 
 .restoran-block {
-  min-height: 160px;
+  height: 160px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -1270,3 +1278,444 @@ a {
   border: 1px solid #c7c7c7; }
   .institution:hover .restoran-item_title {
     color: #DC8646; }
+
+.main-restoran-categori-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .main-restoran-categori-block .restoran-categori-main-info {
+    height: 260px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-image: url(../img/restoran-categori/bg-org.jpg); }
+    .main-restoran-categori-block .restoran-categori-main-info .institution {
+      width: 1090px;
+      border: 0;
+      background-color: transparent; }
+      .main-restoran-categori-block .restoran-categori-main-info .institution .restoran-image {
+        margin: 0px 50px 0px 30px; }
+      .main-restoran-categori-block .restoran-categori-main-info .institution .restoran-item_title {
+        color: #FFFFFF; }
+      .main-restoran-categori-block .restoran-categori-main-info .institution .restoran-item_description {
+        color: #ffffff; }
+        .main-restoran-categori-block .restoran-categori-main-info .institution .restoran-item_description span {
+          color: #acacac; }
+      .main-restoran-categori-block .restoran-categori-main-info .institution .restoran-item_star-count {
+        color: #b9b9b9; }
+      .main-restoran-categori-block .restoran-categori-main-info .institution .restoran-item_sub-titile {
+        color: #b9b9b9; }
+      .main-restoran-categori-block .restoran-categori-main-info .institution .restoran-item_big {
+        color: #ffffff; }
+      .main-restoran-categori-block .restoran-categori-main-info .institution .order-from .restoran-item_big:before {
+        background-image: url(../img/ico/ico-money-white.png); }
+      .main-restoran-categori-block .restoran-categori-main-info .institution .delivery .restoran-item_big:before {
+        background-image: url(../img/ico/delivery-white.png); }
+      .main-restoran-categori-block .restoran-categori-main-info .institution .time-of-delivery .restoran-item_big:before {
+        background-image: url(../img/ico/ico-time-white.png); }
+      .main-restoran-categori-block .restoran-categori-main-info .institution:hover .restoran-item_title {
+        color: #ffffff; }
+  .main-restoran-categori-block .main-restoran-categori .sidebar-left .restoran-categori li:first-child a {
+    color: #75ac39;
+    font-weight: 600;
+    font-size: 18px; }
+    .main-restoran-categori-block .main-restoran-categori .sidebar-left .restoran-categori li:first-child a:hover {
+      color: #8dc63f; }
+  .main-restoran-categori-block .main-restoran-categori .sidebar-left .search-name-food {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 6px; }
+    .main-restoran-categori-block .main-restoran-categori .sidebar-left .search-name-food input {
+      height: 30px;
+      padding: 0px 10px;
+      margin: 0;
+      width: calc(100% - 24px);
+      font-size: 16px;
+      border: 1px solid #A9A9A9;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      color: #5D5C5C; }
+    .main-restoran-categori-block .main-restoran-categori .sidebar-left .search-name-food .search-restoran-btn {
+      height: 30px;
+      width: 30px;
+      border: none;
+      position: absolute;
+      top: 0;
+      right: 3px; }
+  .main-restoran-categori-block .main-restoran-categori .sidebar-left h5 {
+    color: #5D5C5C;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: normal; }
+  .main-restoran-categori-block .main-restoran-categori .sidebar-left .restoran-categori {
+    padding-left: 0px; }
+    .main-restoran-categori-block .main-restoran-categori .sidebar-left .restoran-categori li {
+      height: 46px;
+      width: 100%;
+      line-height: 46px;
+      display: block;
+      border-top: 1px solid #EAD9D9; }
+      .main-restoran-categori-block .main-restoran-categori .sidebar-left .restoran-categori li a {
+        width: 100%;
+        display: block;
+        color: #5D5C5C; }
+        .main-restoran-categori-block .main-restoran-categori .sidebar-left .restoran-categori li a:hover {
+          color: #CC3E32; }
+  .main-restoran-categori-block .main-restoran-categori .content-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .main-restoran-categori-block .main-restoran-categori .content-block h3 {
+      margin-left: 22px;
+      margin-bottom: 20px;
+      color: #000;
+      font-size: 24px;
+      font-weight: 300;
+      font-family: "proxima","Arial",sans-serif;
+      line-height: 26px; }
+    .main-restoran-categori-block .main-restoran-categori .content-block .content-products {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      .main-restoran-categori-block .main-restoran-categori .content-block .content-products .product-block {
+        width: 240px;
+        margin: 0px 21px 20px 21px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        border: 1px solid #ececec;
+        background-color: #FFF3EA;
+        -webkit-transition: all 100ms ease;
+        -o-transition: all 100ms ease;
+        transition: all 100ms ease; }
+        .main-restoran-categori-block .main-restoran-categori .content-block .content-products .product-block:hover {
+          border: 1px solid #ffa115;
+          -webkit-box-shadow: 0 0 3px #bbb;
+          box-shadow: 0 0 3px #bbb;
+          -webkit-transform: scale(1.03);
+          -ms-transform: scale(1.03);
+          transform: scale(1.03); }
+        .main-restoran-categori-block .main-restoran-categori .content-block .content-products .product-block .image {
+          height: 200px;
+          width: 100%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center; }
+          .main-restoran-categori-block .main-restoran-categori .content-block .content-products .product-block .image img {
+            height: inherit;
+            width: inherit;
+            -o-object-fit: cover;
+            object-fit: cover; }
+      .main-restoran-categori-block .main-restoran-categori .content-block .content-products .title {
+        height: 70px;
+        padding: 0px 10px;
+        color: #333;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        background-color: #EAEAEA; }
+        .main-restoran-categori-block .main-restoran-categori .content-block .content-products .title p {
+          margin: 0; }
+        .main-restoran-categori-block .main-restoran-categori .content-block .content-products .title .description-product {
+          font-size: 14px; }
+      .main-restoran-categori-block .main-restoran-categori .content-block .content-products .product-delivary {
+        padding: 0px 10px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column; }
+        .main-restoran-categori-block .main-restoran-categori .content-block .content-products .product-delivary .product-like-price_block {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between; }
+          .main-restoran-categori-block .main-restoran-categori .content-block .content-products .product-delivary .product-like-price_block .product-like:before {
+            content: '';
+            height: 20px;
+            width: 20px;
+            margin-right: 6px;
+            display: inline-block;
+            background-image: url(../img/ico/ico-like-blue.png);
+            background-size: 100%; }
+          .main-restoran-categori-block .main-restoran-categori .content-block .content-products .product-delivary .product-like-price_block .product-price {
+            color: #000;
+              color-font-size: 20px; }
+            .main-restoran-categori-block .main-restoran-categori .content-block .content-products .product-delivary .product-like-price_block .product-price:before {
+              content: '';
+              height: 20px;
+              width: 20px;
+              margin-right: 6px;
+              display: inline-block;
+              background-image: url(../img/ico/ico-money-blue.png);
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: 100%; }
+        .main-restoran-categori-block .main-restoran-categori .content-block .content-products .product-delivary .btn-block {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center; }
+        .main-restoran-categori-block .main-restoran-categori .content-block .content-products .product-delivary .btn-add-basket {
+          height: 30px;
+          width: 200px;
+          padding: 7px 19px;
+          margin-bottom: 16px;
+          color: #FFFFFF;
+          font-size: 11px;
+          font-weight: 700;
+          text-transform: uppercase;
+          border: 0;
+          border-radius: 3px;
+          background-color: #8dc63f;
+          cursor: pointer; }
+          .main-restoran-categori-block .main-restoran-categori .content-block .content-products .product-delivary .btn-add-basket:hover {
+            background-color: #7bad38; }
+          .main-restoran-categori-block .main-restoran-categori .content-block .content-products .product-delivary .btn-add-basket:visited {
+            background-color: red; }
+
+.main-basket-block .container_center {
+  padding-top: 40px; }
+
+.basket-block {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-shadow: 0px 0px 4px 0px #BBBBBB;
+  box-shadow: 0px 0px 4px 0px #BBBBBB; }
+  .basket-block p {
+    margin: 12px 0px;
+    color: #ffffff;
+    font-size: 18px; }
+  .basket-block .basket-top {
+    height: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .basket-block .basket-top .basket-top_item-main {
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    .basket-block .basket-top .line {
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      display: block;
+      background-color: #BFBAB7;
+      z-index: 0; }
+      .basket-block .basket-top .line .line-orange {
+        height: inherit;
+        width: 0%;
+        background-color: #D77B2B; }
+    .basket-block .basket-top .basket-top_item-block {
+      padding-left: 10px;
+      margin-right: 80px;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      background-color: #fbf9f9;
+      z-index: 1; }
+      .basket-block .basket-top .basket-top_item-block:nth-child(2) {
+        padding: 0; }
+      .basket-block .basket-top .basket-top_item-block:last-child {
+        margin-right: 0; }
+        .basket-block .basket-top .basket-top_item-block:last-child span {
+          padding-right: 0; }
+    .basket-block .basket-top span {
+      padding: 0px 10px;
+      color: #BFBAB7;
+      font-size: 18px; }
+    .basket-block .basket-top .basket-top_item1,
+    .basket-block .basket-top .basket-top_item2,
+    .basket-block .basket-top .basket-top_item3,
+    .basket-block .basket-top .basket-top_item4 {
+      height: 50px;
+      width: 50px;
+      border: 2px solid #C5BFBE;
+      border-radius: 50%;
+      background-size: 60%;
+      background-position: center;
+      background-repeat: no-repeat; }
+    .basket-block .basket-top .basket-top_item1 {
+      background-image: url(../img/ico/ico-basket-basket.png); }
+    .basket-block .basket-top .basket-top_item2 {
+      background-image: url(../img/ico/ico-basket-man.png); }
+    .basket-block .basket-top .basket-top_item3 {
+      background-image: url(../img/ico/ico-basket-like.png);
+      background-size: 66%; }
+    .basket-block .basket-top .basket-top_item4 {
+      background-image: url(../img/ico/ico-basket-money.png); }
+  .basket-block .basket-title {
+    padding: 0px 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background-color: #FDCFAB; }
+  .basket-block .basket-content {
+    min-height: 100px;
+    padding: 15px 15px;
+    background-color: #ffffff; }
+  .basket-block .basket-bottom {
+    display: felx;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #FDCFAB; }
+    .basket-block .basket-bottom .basket-bottom_item-top {
+      padding: 0px 30px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+      .basket-block .basket-bottom .basket-bottom_item-top .basket-text_item1 {
+        font-size: 24px; }
+    .basket-block .basket-bottom .basket-bottom_item-bottom {
+      padding: 0px 30px;
+      margin: 10px 0px 25px 0px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .basket-block .basket-bottom .basket-bottom_item-bottom a {
+        margin-right: 20px;
+        color: #A08C7D;
+        border-bottom: 1px solid transparent;
+        -webkit-transition: all 150ms ease;
+        -o-transition: all 150ms ease;
+        transition: all 150ms ease; }
+        .basket-block .basket-bottom .basket-bottom_item-bottom a:last-child {
+          margin-right: 0px; }
+        .basket-block .basket-bottom .basket-bottom_item-bottom a:hover {
+          color: #D77B2B;
+          border-bottom: 1px solid #D77B2B; }
+
+.basket-text_1,
+.basket-text_2 {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex; }
+
+.basket-text_item1 {
+  width: 410px; }
+
+.basket-text_item2,
+.basket-text_item3,
+.basket-text_item4,
+.basket-text_item5,
+.basket-text_item6,
+.basket-product_price,
+.basket-product_count,
+.basket-product_delivery,
+.basket-product_sum,
+.basket-product_ball {
+  width: 120px; }
+
+.basket-text_item7,
+.basket-product_akcii {
+  width: 100px; }
+
+.basket-product {
+  height: 70px;
+  padding: 0px 15px;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fbf9f9;
+  -webkit-box-shadow: 0px 0px 1px 0px #888;
+  box-shadow: 0px 0px 1px 0px #888; }
+  .basket-product:last-child {
+    margin-bottom: 0; }
+  .basket-product p {
+    color: #6e6e6e; }
+
+.basket-product_title {
+  width: 410px;
+  color: #6e6e6e;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .basket-product_title img {
+    height: 56px;
+    width: 80px;
+    margin-right: 10px; }
+
+.basket-bottom_item-bottom_order {
+  color: #D77B2B !important;
+  font-size: 22px; }

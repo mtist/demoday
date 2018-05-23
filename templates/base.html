@@ -21,23 +21,42 @@
 			<div class="header center-block">
 				<div class="container_space-between">
 					<div class="logo-block">
-						<a class="logo" href=""></a>
+						<a class="logo" href="/"></a>
 						<p>Бесплатный сервис по заказу еды</p>
 					</div>
 					<a class="tel" href="tel:+79634282326">+7 (963) 428-23-26</a>
-					<div class="header_item-right" style="z-index: 33">
-						<ul class="btns-login-reg">
-							<li class="btns-login-reg_item btns-login-reg_item-log">Авторизация</li>
-							<li class="btns-login-reg_item btns-login-reg_item-reg">Регистрация</li>
-						</ul>
-						<a class="basket" href="">
-							<div class="basket-info">
-								<p class="basket-count">2 товара</p>
-								<p href="" class="basket-sum-price">1 200 руб.</p>
-							</div>
-							<img class="basket-logo" src="{% static 'img/ico/ico-basket.png' %}" alt="">
-						</a>
-					</div>
+                    {% if user %}
+
+                        <div class="header_item-right" style="z-index: 33">
+                            <ul class="btns-login-reg">
+                                <li class="btns-login-reg_item"><a href="{{ user }}">{{ user.username }}</a></li>
+                                <li class="btns-login-reg_item"><a href="/auth/logout/">Выйти</a></li>
+                            </ul>
+                            <a class="basket" href="">
+                                <div class="basket-info">
+                                    <p class="basket-count">2 товара</p>
+                                    <p href="" class="basket-sum-price">1 200 руб.</p>
+                                </div>
+                                <img class="basket-logo" src="{% static 'img/ico/ico-basket.png' %}" alt="">
+                            </a>
+                        </div>
+
+                    {% else %}
+                        <div class="header_item-right" style="z-index: 33">
+                            <ul class="btns-login-reg">
+                                <li class="btns-login-reg_item btns-login-reg_item-log">Авторизация</li>
+                                <li class="btns-login-reg_item btns-login-reg_item-reg">Регистрация</li>
+                            </ul>
+                            <a class="basket" href="">
+                                <div class="basket-info">
+                                    <p class="basket-count">2 товара</p>
+                                    <p href="" class="basket-sum-price">1 200 руб.</p>
+                                </div>
+                                <img class="basket-logo" src="{% static 'img/ico/ico-basket.png' %}" alt="">
+                            </a>
+                        </div>
+                    {% endif %}
+
 				</div>
 			</div>
 			<div class="header-search header-search_home center-block">
@@ -61,29 +80,8 @@
 
         {% endblock %}
 
-        <!-- Modal Form -->
-		<div class="modal-form">
-			<div class="form-login">
-				<h2>Вход</h2>
-				<form action="" method="POST">
-					<input type="text" name="login" placeholder="Введите логин">
-					<input type="text" name="password" placeholder="Введите пароль">
-					<input class="form-submit" type="submit" value="Войти">
-					<a class="forget-password" href="">Забыли пароль?</a>
-				</form>
-			</div>
-			<div class="form-registration">
-				<h2>Регистрация</h2>
-				<form action="" method="POST">
-					<input type="text" name="fullname" placeholder="Введите полное имя*" required>
-					<input type="text" name="login" placeholder="Введите логин*" required>
-					<input type="text" name="email" placeholder="Введите E-mail*" required>
-					<input type="text" name="password" placeholder="Введите пароль*" required>
-					<input class="form-submit" type="submit" value="Зарегистрироваться">
-				</form>
-			</div>
-			<button class="close-modalForm"></button>
-		</div>
+        {% include 'login.html' %}
+
 	</div>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<!-- Slick Slider -->

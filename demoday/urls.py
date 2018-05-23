@@ -17,10 +17,15 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from main.views import HomeView, RestaurantsListView
+from main.views import HomeView, RestaurantsListView, RestaurantView
+from loginsys.views import logout, login, register
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', HomeView.as_view(), name='name'),
+    path('', HomeView.as_view(), name='index'),
     path('rests/', RestaurantsListView.as_view(), name="rests"),
+    path('rests/<slug:slug>', RestaurantView.as_view()),
+    path('auth/login/', login, name="login"),
+    path('auth/logout/', logout, name="logout"),
+    path('auth/register/', register, name="register"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -230,16 +230,21 @@ a
 
 .btns-login-reg
 	padding-left: 0px
-	color: #333
+	text-align: right
 	margin-right: 50px
 
 .btns-login-reg_item
-	font-size: 18px
+	font-size: 16px
 	border-bottom: 1px solid transparent
 	cursor: pointer
 	&:hover
 		color: $orange
 		border-bottom: 1px solid $orange
+	a
+		color: #333
+		&:hover
+			color: $orange
+			border-bottom: 1px solid $orange
 
 
 //* Search *//
@@ -255,6 +260,9 @@ a
 		margin: 0
 		font-size: 15px
 		border: none
+	select
+		background-color: #FCF9F9
+		cursor: pointer
 	.header-search_line-edit
 		width: 420px
 		font-size: 16px
@@ -940,7 +948,7 @@ a
 	transition: border 500ms ease
 
 .restoran-block
-	min-height: 160px
+	height: 160px
 	display: flex
 	.restoran-image
 		height: 160px
@@ -1080,3 +1088,357 @@ a
 	border: 1px solid #c7c7c7
 	.restoran-item_title
 		color: #DC8646
+
+
+
+
+//** page 3 **//
+.main-restoran-categori-block
+	display: flex
+	flex-direction: column
+	.restoran-categori-main-info
+		height: 260px
+		display: flex
+		justify-content: center
+		background-image: url(../img/restoran-categori/bg-org.jpg)
+		.institution
+			width: 1090px
+			border: 0
+			background-color: transparent
+			.restoran-image
+				margin: 0px 50px 0px 30px
+			.restoran-item_title
+				color: #FFFFFF
+			.restoran-item_description
+				color: #ffffff
+				span
+					color: #acacac
+			.restoran-item_star-count
+				color: #b9b9b9
+			.restoran-item_sub-titile
+				color: #b9b9b9
+			.restoran-item_big
+				color: #ffffff
+			.order-from .restoran-item_big:before
+				background-image: url(../img/ico/ico-money-white.png)
+			.delivery .restoran-item_big:before
+				background-image: url(../img/ico/delivery-white.png)
+			.time-of-delivery .restoran-item_big:before
+				background-image: url(../img/ico/ico-time-white.png)
+			&:hover
+				.restoran-item_title
+					color: #ffffff
+	.main-restoran-categori
+		.sidebar-left
+			.restoran-categori
+				li:first-child
+					a
+						color: #75ac39
+						font-weight: 600
+						font-size: 18px
+						&:hover
+							color: #8dc63f
+
+			.search-name-food
+				position: relative
+				top: 0
+				left: 0
+				margin-bottom: 6px
+				input
+					height: 30px
+					padding: 0px 10px
+					margin: 0
+					width: calc(100% - 24px)
+					font-size: 16px
+					border: 1px solid #A9A9A9
+					box-shadow: none
+					color: #5D5C5C
+				.search-restoran-btn
+					height: 30px
+					width: 30px
+					border: none
+					position: absolute
+					top: 0
+					right: 3px
+			h5
+				color: #5D5C5C
+				font-size: 18px
+				font-weight: 600
+				font-style: normal
+			.restoran-categori
+				padding-left: 0px
+				li
+					height: 46px
+					width: 100%
+					line-height: 46px
+					display: block
+					border-top: 1px solid #EAD9D9
+					a
+						width: 100%
+						display: block
+						color: #5D5C5C
+						&:hover
+							color: #CC3E32
+		.content-block
+			display: flex
+			flex-direction: column
+			h3
+				margin-left: 22px;
+				margin-bottom: 20px
+				color: #000
+				font-size: 24px
+				font-weight: 300
+				font-family: "proxima","Arial",sans-serif
+				line-height: 26px
+			.content-products
+				display: flex
+				flex-wrap: wrap
+				.product-block
+					width: 240px
+					margin: 0px 21px 20px 21px
+					display: flex
+					flex-direction: column
+					border: 1px solid #ececec
+					background-color: #FFF3EA
+					transition: all 100ms ease
+					&:hover
+						border: 1px solid #ffa115
+						box-shadow: 0 0 3px #bbb
+						transform: scale(1.03)
+					.image
+						height: 200px
+						width: 100%
+						display: flex
+						align-items: center
+						justify-content: center
+						img
+							height: inherit
+							width: inherit
+							object-fit: cover
+				.title
+					height: 70px
+					padding: 0px 10px
+					color: #333
+					display: flex
+					flex-direction: column
+					align-items: center
+					justify-content: center
+					background-color: #EAEAEA
+					p
+						margin: 0
+					.description-product
+						font-size: 14px
+				.product-delivary
+					padding: 0px 10px
+					display: flex
+					flex-direction: column
+					.product-like-price_block
+						display: flex
+						justify-content: space-between
+						.product-like:before
+							content: ''
+							height: 20px
+							width: 20px
+							margin-right: 6px
+							display: inline-block
+							background-image: url(../img/ico/ico-like-blue.png)
+							background-size: 100%
+						.product-price
+							color: #000
+    						font-size: 20px
+							&:before
+								content: ''
+								height: 20px
+								width: 20px
+								margin-right: 6px
+								display: inline-block
+								background-image: url(../img/ico/ico-money-blue.png)
+								background-repeat: no-repeat
+								background-position: center
+								background-size: 100%
+					.btn-block
+						display: flex
+						justify-content: center
+					.btn-add-basket
+						height: 30px
+						width: 200px
+						padding: 7px 19px
+						margin-bottom: 16px
+						color: #FFFFFF
+						font-size: 11px
+						font-weight: 700
+						text-transform: uppercase
+						border: 0
+						border-radius: 3px
+						background-color: #8dc63f
+						cursor: pointer
+						&:hover
+							background-color: #7bad38
+						&:visited
+							background-color: red
+
+
+
+
+
+
+
+
+//** Basket **//
+.main-basket-block
+	.container_center
+		padding-top: 40px
+
+.basket-block
+	width: 100%
+	display: flex
+	flex-direction: column
+	box-shadow: 0px 0px 4px 0px #BBBBBB
+	p
+		margin: 12px 0px
+		color: #ffffff
+		font-size: 18px
+	.basket-top
+		height: 100px
+		display: flex
+		align-items: center
+		justify-content: center
+		.basket-top_item-main
+			position: relative
+			display: flex
+			align-items: center
+		.line
+			height: 2px
+			width: 100%
+			position: absolute
+			display: block
+			background-color: #BFBAB7
+			z-index: 0
+			.line-orange
+				height: inherit
+				width: 0%
+				background-color: #D77B2B
+		.basket-top_item-block
+			padding-left: 10px
+			margin-right: 80px
+			display: inline-flex
+			align-items: center
+			background-color: #fbf9f9
+			z-index: 1
+			&:nth-child(2)
+				padding: 0
+			&:last-child
+				margin-right: 0
+				span
+					padding-right: 0
+		span
+			padding: 0px 10px
+			color: #BFBAB7
+			font-size: 18px
+		.basket-top_item1,
+		.basket-top_item2,
+		.basket-top_item3,
+		.basket-top_item4
+			height: 50px
+			width: 50px
+			border: 2px solid #C5BFBE
+			border-radius: 50%
+			background-size: 60%
+			background-position: center
+			background-repeat: no-repeat
+		.basket-top_item1
+			background-image: url(../img/ico/ico-basket-basket.png)
+		.basket-top_item2
+			background-image: url(../img/ico/ico-basket-man.png)
+		.basket-top_item3
+			background-image: url(../img/ico/ico-basket-like.png)
+			background-size: 66%
+		.basket-top_item4
+			background-image: url(../img/ico/ico-basket-money.png)
+	.basket-title
+		padding: 0px 30px
+		display: flex
+		justify-content: space-between
+		background-color: #FDCFAB
+	.basket-content
+		min-height: 100px
+		padding: 15px 15px
+		background-color: #ffffff
+	.basket-bottom
+		display: felx
+		flex-direction: column
+		background-color: #FDCFAB
+		.basket-bottom_item-top
+			padding: 0px 30px
+			display: flex
+			align-items: center
+			justify-content: space-between
+			.basket-text_item1
+				font-size: 24px
+		.basket-bottom_item-bottom
+			padding: 0px 30px
+			margin: 10px 0px 25px 0px
+			display: flex
+			align-items: center
+			a
+				margin-right: 20px
+				color: #A08C7D
+				border-bottom: 1px solid transparent
+				transition: all 150ms ease
+				&:last-child
+					margin-right: 0px
+				&:hover
+					color: #D77B2B
+					border-bottom: 1px solid #D77B2B
+
+
+.basket-text_1,
+.basket-text_2
+	display: inline-flex
+
+.basket-text_item1,
+	width: 410px
+
+.basket-text_item2,
+.basket-text_item3,
+.basket-text_item4,
+.basket-text_item5,
+.basket-text_item6,
+.basket-product_price,
+.basket-product_count,
+.basket-product_delivery,
+.basket-product_sum,
+.basket-product_ball
+	width: 120px
+
+.basket-text_item7,
+.basket-product_akcii
+	width: 100px
+
+.basket-product
+	height: 70px
+	padding: 0px 15px
+	margin-bottom: 10px
+	display: flex
+	align-items: center
+	background-color: #fbf9f9
+	box-shadow: 0px 0px 1px 0px #888
+	&:last-child
+		margin-bottom: 0
+	p
+		color: #6e6e6e
+
+.basket-product_title
+	width: 410px
+	color: #6e6e6e
+	font-size: 18px
+	display: flex
+	align-items: center
+	img
+		height: 56px
+		width: 80px
+		margin-right: 10px
+
+.basket-bottom_item-bottom_order
+	color: $orange !important
+	font-size: 22px

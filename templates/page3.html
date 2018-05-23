@@ -1,0 +1,170 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="main-restoran-categori-block">
+    <div class="restoran-categori-main-info">
+        <div class="institution">
+            <div class="restoran-block">
+                <div class="restoran-image">
+                    <img src="{{ rest.icon.url }}" alt="{{ rest.title }}">
+                </div>
+                <div class="restoran-info-block">
+                    <div class="restoran-item_top">
+                        <div class="restoran-item_top-left">
+                            <h2 class="restoran-item_title">{{ rest.title }}</h2>
+                            <p class="restoran-item_description"><span>Кухня:</span>
+                                {% for kithen in rest.kitchens.all %}
+                                    {{ kithen.title }} {%  if not forloop.last %}/{% endif %}
+                                {% endfor %}
+                            </p>
+                        </div>
+                        <div class="restoran-item_top-right">
+                            <div class="restoran-rate-block">
+                                <div class="restoran-rate" style="width: 80%"></div>
+                            </div>
+                            <p class="restoran-item_star-count">486 оценок</p>
+                        </div>
+                    </div>
+                    <div class="restoran-item_bottom">
+                        <div class="order-from restoran-item_bottom-item">
+                            <p class="restoran-item_sub-titile">Заказ от</p>
+                            <p class="restoran-item_big">{{ rest.order_of }} Р</p>
+                        </div>
+                        <div class="delivery restoran-item_bottom-item">
+                            <p class="restoran-item_sub-titile">Доставка</p>
+                            <p class="restoran-item_big">{% if restaurant.free_delivery %} Бесплатно {% else %} Платно {% endif %}</p>
+                        </div>
+                        <div class="time-of-delivery restoran-item_bottom-item">
+                            <p class="restoran-item_sub-titile">Время доставки</p>
+                            <p class="restoran-item_big">До {{ restaurant.delivery_time }} ч.</p>
+                        </div>
+                        <div class="payment-card restoran-item_bottom-item">
+                            <p class="restoran-item_sub-titile">Оплата картой</p>
+                            {% if restaurant.card_pay %}
+                                <p class="restoran-item_big">Есть</p>
+                            {% else %}
+                                <p class="restoran-item_big">Нет</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-content main-restoran-categori center-block">
+        <div class="container_space-between">
+            <div class="sidebar-left">
+                <form class="search-name-food" action="">
+                    <input class="header-search_line-edit" type="text" placeholder="Поиск блюда">
+                    <input class="search-restoran-btn" type="submit" value="">
+                </form>
+                <ul class="restoran-categori">
+                    <li>
+                        <span class="flag-green"></span>
+                        <a href="">Акции</a>
+                    </li>
+                    {% for food in foods %}
+                        <li><a href="">{{ food.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="content-block">
+                <h3 class="">Кавказский Дворик - меню ресторана</h3>
+                <div class="content-products">
+                    <div class="product-block">
+                        <div class="image">
+                            <img src="{% static 'img/categori-sushi.jpg' %}" alt="product1">
+                        </div>
+                        <div class="title">
+                            <p class="name-product">С угрем</p>
+                            <p class="description-product">Состав: рис, соль...</p>
+                        </div>
+                        <div class="product-delivary">
+                            <div class="product-like-price_block">
+                                <p class="product-like">18</p>
+                                <p class="product-price">290 р</p>
+                            </div>
+                            <div class="btn-block">
+                                <button class="btn-add-basket">Заказать</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-block">
+                        <div class="image">
+                            <img src="{% static 'img/categori-sushi.jpg' %}" alt="product1">
+                        </div>
+                        <div class="title">
+                            <p class="name-product">С угрем</p>
+                            <p class="description-product">Состав: рис, соль...</p>
+                        </div>
+                        <div class="product-delivary">
+                            <div class="product-like-price_block">
+                                <p class="product-like">18</p>
+                                <p class="product-price">290 р</p>
+                            </div>
+                            <div class="btn-block">
+                                <button class="btn-add-basket">Заказать</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-block">
+                        <div class="image">
+                            <img src="{% static 'img/categori-sushi.jpg' %}" alt="product1">
+                        </div>
+                        <div class="title">
+                            <p class="name-product">С угрем</p>
+                            <p class="description-product">Состав: рис, соль...</p>
+                        </div>
+                        <div class="product-delivary">
+                            <div class="product-like-price_block">
+                                <p class="product-like">18</p>
+                                <p class="product-price">290 р</p>
+                            </div>
+                            <div class="btn-block">
+                                <button class="btn-add-basket">Заказать</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-block">
+                        <div class="image">
+                            <img src="{% static 'img/categori-sushi.jpg' %}" alt="product1">
+                        </div>
+                        <div class="title">
+                            <p class="name-product">С угрем</p>
+                            <p class="description-product">Состав: рис, соль...</p>
+                        </div>
+                        <div class="product-delivary">
+                            <div class="product-like-price_block">
+                                <p class="product-like">18</p>
+                                <p class="product-price">290 р</p>
+                            </div>
+                            <div class="btn-block">
+                                <button class="btn-add-basket">Заказать</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-block">
+                        <div class="image">
+                            <img src="{% static 'img/categori-sushi.jpg'%}" alt="product1">
+                        </div>
+                        <div class="title">
+                            <p class="name-product">С угрем</p>
+                            <p class="description-product">Состав: рис, соль...</p>
+                        </div>
+                        <div class="product-delivary">
+                            <div class="product-like-price_block">
+                                <p class="product-like">18</p>
+                                <p class="product-price">290 р</p>
+                            </div>
+                            <div class="btn-block">
+                                <button class="btn-add-basket">Заказать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

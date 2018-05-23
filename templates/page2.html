@@ -7,33 +7,29 @@
     <div class="main-content center-block">
                 <div class="container_space-between">
                     <div class="sidebar-left">
-                        <div class="sidebar_item">
-                            <input type="checkbox" id="sidebar_item1" checked>
-                            <label class="title" for="sidebar_item1">Еда жи есть<i class="arrow-bottom"></i></label>
-                            <ul class="sidebar_item-list">
-                                <li><input type="checkbox" id="sidebar_item1-list-li_1"><label for="sidebar_item1-list-li_1">Пицца</label></li>
-                                <li><input type="checkbox" id="sidebar_item1-list-li_2"><label for="sidebar_item1-list-li_2">Салатики</label></li>
-                                <li><input type="checkbox" id="sidebar_item1-list-li_3"><label for="sidebar_item1-list-li_3">Суши</label></li>
-                                <li><input type="checkbox" id="sidebar_item1-list-li_4"><label for="sidebar_item1-list-li_4">Пироги</label></li>
-                                <li><input type="checkbox" id="sidebar_item1-list-li_5"><label for="sidebar_item1-list-li_5">Бургеры</label></li>
-                                <li><input type="checkbox" id="sidebar_item1-list-li_6"><label for="sidebar_item1-list-li_6">Шашлыки</label></li>
-                                <li><input type="checkbox" id="sidebar_item1-list-li_7"><label for="sidebar_item1-list-li_7">Десерты</label></li>
-                            </ul>
-                        </div>
-                        <div class="sidebar_item">
-                            <input type="checkbox" id="sidebar_item2" checked>
-                            <label class="title" for="sidebar_item2">Кухня<i class="arrow-bottom"></i></label>
-                            <ul class="sidebar_item-list">
-                                <li><input type="checkbox" id="sidebar_item2-list-li_1"><label for="sidebar_item2-list-li_1">Экзотическая</label></li>
-                                <li><input type="checkbox" id="sidebar_item2-list-li_2"><label for="sidebar_item2-list-li_2">Русская</label></li>
-                                <li><input type="checkbox" id="sidebar_item2-list-li_3"><label for="sidebar_item2-list-li_3">Осетинская</label></li>
-                                <li><input type="checkbox" id="sidebar_item2-list-li_4"><label for="sidebar_item2-list-li_4">Узбекская</label></li>
-                                <li><input type="checkbox" id="sidebar_item2-list-li_5"><label for="sidebar_item2-list-li_5">Японская</label></li>
-                                <li><input type="checkbox" id="sidebar_item2-list-li_6"><label for="sidebar_item2-list-li_6">Итальянская</label></li>
-                                <li><input type="checkbox" id="sidebar_item2-list-li_7"><label for="sidebar_item2-list-li_7">Европейская</label></li>
-                                <li><input type="checkbox" id="sidebar_item2-list-li_7"><label for="sidebar_item2-list-li_7">Кавказская</label></li>
-                            </ul>
-                        </div>
+                        <form action="" name="foods">
+                            <div class="sidebar_item">
+                                <input type="checkbox" id="sidebar_item1" checked>
+                                <label class="title" for="sidebar_item1">Еда жи есть<i class="arrow-bottom"></i></label>
+                                <ul class="sidebar_item-list">
+                                    {% for food in foods%}
+                                        <li><input type="checkbox" name="food" value="{{ food.pk }}" id="sidebar_item1-list-{{ food.pk }}"><label for="sidebar_item1-list-{{ food.pk }}">{{ food.title }}</label></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            <div class="sidebar_item">
+                                <input type="checkbox" id="sidebar_item2" checked>
+                                <label class="title" for="sidebar_item2">Кухня<i class="arrow-bottom"></i></label>
+                                <ul class="sidebar_item-list">
+                                    {% for kitchen in kitchens %}
+                                        <li><input type="checkbox" name="kitchen" value="{{ kitchen.pk }}" id="sidebar_item2-list-{{ kitchen.pk }}"><label for="sidebar_item2-list-{{ kitchen.pk }}">{{ kitchen.title }}</label></li>
+                                    {% endfor %}
+
+                                </ul>
+                            </div>
+                            <input type="submit" value="Применить">
+                        </form>
+
                         <p>Сайт Едим дома – это сервис, который объединяет сочинские рестораны, кафе, пиццерии, фаст-фуды и суши-бары, осуществляющие доставку еды по городу. Используя этот сервис, вы сможете:</p>
                         <ul class="txt">
                             <li>сэкономить время, заказывая горячие блюда, закуски и десерты из ресторанов;</li>
@@ -64,7 +60,7 @@
                             </div>
                         </div>
                         {% for restaurant in restaurant_list %}
-                            <a href="" class="institution">
+                            <a href="/rests/{{ restaurant.slug }}" class="institution">
                                 <div class="restoran-block">
                                     <div class="restoran-image">
                                         <img src="{{ restaurant.icon.url }}" alt="{{ restaurant.title }}">
